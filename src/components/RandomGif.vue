@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="box cta random-title">
+      <p class="title" align="center">Random Gif</p>
       <div class="columns is-mobile is-centered">
         <div id="app" class="random-text">
         </div>
@@ -74,5 +75,14 @@
 
   a {
     color: #35495E;
+  }
+
+  .random-title {
+    background-color: #0e0202;
+    height: 70px;
+  }
+
+  .title {
+    color: white;
   }
 </style>

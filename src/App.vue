@@ -13,8 +13,6 @@
 
     <router-view></router-view>
 
-
-
     <footer>
       <div id="footer">
       </div>
@@ -40,6 +38,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    background-color: #0e0202;
   }
 
   main {
@@ -72,5 +71,8 @@
     font-weight: bold;
   }
 
+  .burger {
+    background-color: #0e0202;
+  }
 
 </style>
