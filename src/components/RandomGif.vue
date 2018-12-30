@@ -2,33 +2,21 @@
   <div>
     <div class="box cta random-title">
       <p class="title" align="center">Random Gif</p>
-      <div class="columns is-mobile is-centered">
-        <div id="app" class="random-text">
-        </div>
-      </div>
     </div>
+
     <section class="container random-body-section">
       <div class="level-item">
-        <div class="columns is-multiline is-centered cards-container" id="sectioncontainer">
+        <div class="columns is-multiline is-centered cards-container">
           <div class="column is-narrow">
             <article class="message is-link">
               <div class="message-header">
-                <img :src="randomGif" height="200px"/>
+                <img :src="randomGif" height="200px" alt="random"/>
               </div>
             </article>
           </div>
         </div>
       </div>
     </section>
-    <section>
-
-
-
-
-    </section>
-    <div class="columns is-mobile is-centered">
-      <div class="column is-half is-narrow"></div>
-    </div>
   </div>
 </template>
 
