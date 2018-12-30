@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>testpwavue</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-16x16.png">
-    <!--[if IE]><link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
+    <title>Giphy pwa</title>
+    <link rel="icon" type="image/png" href="/static/img/icons/nyan-cat.png" sizes="16x16">
+    <!--[if IE]><link rel="shortcut icon" href="/static/img/icons/nyan-cat.ico"><![endif]-->
     <!-- Add to home screen for Android and modern mobile browsers -->
     <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>static/manifest.json">
     <meta name="theme-color" content="#4DBA87">
@@ -37,38 +36,6 @@
         padding-top: 16px;
       }
 
-      #sectioncontainer {
-        margin-top: 20px;
-      }
-
-      /* Keep from sticking to sides */
-      .cards-container {
-        max-width: 95%;
-      }
-
-      .board-item {
-        margin: 5px 0;
-        will-change: transform;
-      }
-
-      .board-item-content {
-        word-wrap: normal;
-        position: relative;
-        padding: 20px;
-        background: #fff;
-        border-radius: 4px;
-        font-size: 17px;
-        text-align: center;
-        cursor: pointer;
-        -webkit-box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-        box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
-        margin: 5px;
-      }
-
-      .delete {
-        pointer-events: auto;
-      }
-
       footer {
         margin-top: 2rem;
       }
@@ -78,26 +45,10 @@
         height: 100%;
       }
 
-
       .random-body {
         background-color: #0e0202;
       }
 
-      .random-title {
-        background-color: #0e0202;
-        height: 70px;
-      }
-
-      .random-text {
-        color: white;
-        font-size: 40px;
-        font-weight: bold;
-      }
-
-      .random-body-section {
-        margin-top: 50px;
-
-      }
     </style>
   </head>
   <body class="random-body">
