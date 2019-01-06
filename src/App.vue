@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <nav class="navbar has-shadow head-bar">
-      <div class="container">
-        <div class="navbar-brand"><img class="logo-header" src="@/assets/giphy-logo.png" height="200px"/>
+    <nav class="navbar has-shadow head-bar ">
+      <div class="container columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+        <div class="">
+          <img class="logo-header" src="@/assets/giphy-logo.png" height="200px"/>
           <div class="navbar-burger burger" data-target="navMenu"><span></span><span></span><span></span></div>
         </div>
         <div class="navbar-menu" id="navMenu">

@@ -1,16 +1,16 @@
-<template>
+<template lang="html">
   <div>
     <div class="box cta random-title">
-      <p class="title" align="center">Random Gif</p>
+      <p class="title" align="center">{{ title }}</p>
     </div>
 
-    <section class="container random-body-section">
-      <div class="level-item">
-        <div class="columns is-multiline is-centered cards-container">
-          <div class="column is-narrow">
+    <section>
+      <div>
+        <div class="columns is-multiline is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd cards-container">
+          <div>
             <article class="message is-link">
               <div class="message-header">
-                <img :src="randomGif" height="200px" alt="random"/>
+                <img :src="randomGif" height="200px" alt="randomGif"/>
               </div>
             </article>
           </div>
@@ -20,18 +20,17 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
   import axios from 'axios';
 
   export default {
     data() {
       return {
-        search: "",
         title: "Random gif",
         randomGif: ''
       }
     },
-
+    //Fetches when component is created
     created() {
       axios.get("http://api.giphy.com/v1/gifs/random?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
         .then(response => {
@@ -45,26 +44,7 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #35495E;
-  }
-
   .random-title {
     background-color: #0e0202;
     height: 70px;
