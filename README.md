@@ -1,9 +1,17 @@
-# testpwavue
+# GiphyPwa
 
 > A Vue.js project
 
-## Build Setup
+> Bulma template
 
+## Build Setup
+This PWA app propose to provide 3 different pages from Giphy API.
+
+The first one displays a random GIF.
+
+The second one, the 25 first trending GIFs.
+
+And the last one displaying a random sticker.
 ``` bash
 # install dependencies
 npm install
