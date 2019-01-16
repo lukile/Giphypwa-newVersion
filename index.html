@@ -57,16 +57,15 @@
     </noscript>
     <div id="app"></div>
     <!-- Todo: only include in production -->
-    <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
     <!-- built files will be auto injected -->
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-          .register('<%= htmlWebpackPlugin.files.publicPath %>/src/service-worker.js')
+          .register('/static/script/service-worker.js')
           .then(function() { 
             console.log('Service Worker Registered'); 
-          });
+          }).catch(e => console.log(e.message));
       }
-          </script>
+    </script>
   </body>
 </html>

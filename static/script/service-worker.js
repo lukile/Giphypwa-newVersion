@@ -1,5 +1,8 @@
 var cacheName = 'giphypwa';
 var filesToCache = [
+  '/',
+  '/index.html',
+  // '/src/main.js',
   '/static/img/icons/android-chrome-192x192.png',
   '/static/img/icons/android-chrome-512x512.png',
   '/static/img/icons/apple-touch-icon-60x60.png',
@@ -10,8 +13,9 @@ var filesToCache = [
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
+      console.log('[ServiceWorker] Caching');
+      return cache.addAll(filesToCache)
+        .catch(e => console.error(e));
     })
   );
 });
