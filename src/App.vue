@@ -73,7 +73,7 @@
   }
 
   .burger {
-    background-color: #0e0202;
+    background-color: #d31b46;
   }
 
 </style>
