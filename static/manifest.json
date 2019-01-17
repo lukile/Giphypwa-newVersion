@@ -1,6 +1,6 @@
 {
-  "name": "testpwavue",
-  "short_name": "testpwavue",
+  "name": "giphyPwa",
+  "short_name": "giphyPwa",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
