@@ -25,7 +25,8 @@
     data() {
       return {
         title: "Random Sticker Gif",
-        gifs: null
+        gifs: null,
+        transitionName: 'slide-left'
       }
     },
     created() {

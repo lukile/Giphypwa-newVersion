@@ -1,28 +1,27 @@
 <template>
-  <div class="parent">
-    <section class="demo">
-      <dl class="list nigiri">
-        <dt>Choose a theme</dt>
-        <dd><router-link to="/sticker">Stickers GIFs</router-link></dd>
-        <dd><router-link to="/trending">Trending GIFs</router-link></dd>
-        <dd><router-link to="/random">Random GIFs</router-link></dd>
-      </dl>
-    </section>
-    <transition :name="transitionName">
-      <router-view class="child-view"></router-view>
-    </transition>
-  </div>
+  <section class="demo">
 
+    <dl class="list nigiri">
+      <dt>Choose a theme</dt>
+      <dd><router-link to="/sticker">Stickers GIFs</router-link></dd>
+      <dd><router-link to="/trending">Trending GIFs</router-link></dd>
+      <dd><router-link to="/random">Random GIFs</router-link></dd>
+    </dl>
+    <transition name="fade" mode="out-in">
+      <router-view class="view"></router-view>
+    </transition>
+
+  </section>
 </template>
 
 <script>
     export default {
-        name: "Main",
-        transitionName: 'slide-left'
+        name: "Main"
     }
 </script>
 
 <style scoped>
+
   html, body {
 
     -webkit-font-smoothing: antialiased;
@@ -63,6 +62,34 @@
     transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
 
     text-decoration: none;
+  }
+
+  .header {
+
+    text-align: center;
+    position: absolute;
+    color: #333;
+    width: 100%;
+    top: 9%;
+  }
+
+  .header h1 {
+
+    letter-spacing: -1px;
+    text-shadow: -2px -1px 1px #fff, 1px 2px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+    font-size: 36px;
+    margin: 0;
+  }
+
+  .header h2 {
+
+    text-transform: uppercase;
+    text-shadow: -2px -1px 1px #fff, 1px 1px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 300;
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+    margin: 0;
   }
 
   .demo:after {
@@ -156,6 +183,18 @@
     -o-transform-origin: 110% 25%;
     transform-origin: 110% 25%;
 
-    left: 10%;
+    left: 20%;
   }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease;
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
+  .child-view {
+    position: absolute;
+    transition: all .5s cubic-bezier(.55,0,.1,1);
+  }
+
 </style>
