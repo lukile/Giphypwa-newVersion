@@ -1,5 +1,6 @@
 <template>
   <section class="demo">
+    <quick-menu :menu-count=getCount :icon-class=icons  :menu-url-list=list :background-color=backgroundColor :color=color :position=position :is-open-new-tab=getIsOpenNewTab @process=print></quick-menu>
 
     <dl class="list nigiri">
       <dt>Choose a theme</dt>
@@ -15,13 +16,50 @@
 </template>
 
 <script>
+    import quickMenu from '../components/menu/quickMenu'
+
     export default {
-        name: "Main"
+        name: "Main",
+      data () {
+        return {
+          count:3,
+          icons:["fa fa-github","fa fa-comment","fa fa-code"],
+          list:[{'isLink':true,url:"/sticker"},{'isLink':true,url:"/trending"},{'isLink':true,url:"/random"}],
+          backgroundColor:'#E32551',
+          color:'#ffffff',
+          position:'top-left',
+          isOpenNewTab:false
+
+        }
+      },
+      components:{
+        'quickMenu':quickMenu
+      },
+      computed:{
+        getCount(){
+          return Number(this.count)
+        },
+        getIsOpenNewTab(){
+          return Boolean(this.isOpenNewTab)
+        }
+      },
+      methods:{
+        print(key){
+          if(key===3){
+            console.log('please send me an email')
+          }
+          if(key===0){
+            window.open('https://github.com/AshleyLv/vue-quick-menu')
+
+          }
+        }
+      }
     }
 </script>
 
 <style scoped>
 
+  @import '../assets/global.css';
   html, body {
 
     -webkit-font-smoothing: antialiased;

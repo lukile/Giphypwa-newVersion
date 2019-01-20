@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/Home'
-import RandomGif from '../components/Random/RandomGif'
-import TrendingGif from '../components/Trending/TrendingGif'
-import RandomSticker from '../components/Sticker/RandomSticker'
+import RandomGif from '../components/random/RandomGif'
+import TrendingGif from '../components/trending/TrendingGif'
+import RandomSticker from '../components/sticker/RandomSticker'
 import Main from "../components/Main";
 
 Vue.use(Router);
