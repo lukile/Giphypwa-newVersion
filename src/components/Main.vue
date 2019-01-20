@@ -42,17 +42,6 @@
         getIsOpenNewTab(){
           return Boolean(this.isOpenNewTab)
         }
-      },
-      methods:{
-        print(key){
-          if(key===3){
-            console.log('please send me an email')
-          }
-          if(key===0){
-            window.open('https://github.com/AshleyLv/vue-quick-menu')
-
-          }
-        }
       }
     }
 </script>
