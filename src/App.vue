@@ -2,10 +2,6 @@
   <div id="app">
     <nav class="navbar has-shadow head-bar ">
       <div class="container columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-        <div class="">
-          <img class="logo-header" src="assets/giphy-logo.png" height="200px"/>
-          <div class="navbar-burger burger" data-target="navMenu"><span></span><span></span><span></span></div>
-        </div>
         <div class="navbar-menu" id="navMenu">
           <p class="title-header">GIPHY PWA</p>
         </div>
@@ -56,24 +52,18 @@
   }
 
   .head-bar {
-    background-color: #0e0202;
+    background-color: #E32551;
     height: 70px;
     margin-bottom: 30px;
   }
 
-  .logo-header {
-    width: 70px;
-  }
-
   .title-header {
     margin-top: 11px;
+    margin-left: 40px;
     font-size: 30px;
     color: white;
     font-weight: bold;
-  }
-
-  .burger {
-    background-color: #d31b46;
+    align-self: center;
   }
 
 </style>

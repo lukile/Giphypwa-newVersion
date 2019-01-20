@@ -5,7 +5,7 @@
     </div>
 
     <section>
-      <div>
+      <div id="gifs">
         <div class="columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
           <div v-for="gif in gifs" class="column is-one-fifth">
             <article>
@@ -42,5 +42,9 @@
 </script>
 
 <style scoped>
-
+  #gifs {
+    margin-left: 300px;
+    margin-top: 60px;
+    margin-right: 60px;
+  }
 </style>

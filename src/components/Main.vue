@@ -183,7 +183,7 @@
     -o-transform-origin: 110% 25%;
     transform-origin: 110% 25%;
 
-    left: 20%;
+    left: 7%;
   }
 
   .fade-enter-active, .fade-leave-active {
