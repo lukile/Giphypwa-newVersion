@@ -1,6 +1,6 @@
 {
-  "name": "Giphypwa",
-  "short_name": "Giphy",
+  "name": "GifsWebApps",
+  "short_name": "Giffies",
   "icons": [{
     "src": "static/img/icons/apple-touch-icon-120x120",
     "sizes": "128x128",
