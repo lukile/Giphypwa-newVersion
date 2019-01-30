@@ -26,7 +26,7 @@ app.use (function (req, res, next) {
     }
 });*/
 
-app.use(sslRedirect());
+app.use(sslRedirect(['production'], 301));
 
 //app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
