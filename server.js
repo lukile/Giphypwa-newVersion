@@ -6,7 +6,7 @@ app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
 
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "*"); // tous les requêtes du site je les accepte -- fails de sécurité
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
