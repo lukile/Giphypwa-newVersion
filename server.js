@@ -3,7 +3,8 @@ const serveStatic = require("serve-static")
 const path = require('path');
 const cors = require('cors');
 //const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
-const sslRedirect = require('heroku-ssl-redirect')
+//const sslRedirect = require('heroku-ssl-redirect')
+const forceSslRedirect = require('force-ssl-heroku');
 
 app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
@@ -26,7 +27,8 @@ app.use (function (req, res, next) {
     }
 });*/
 
-app.use(sslRedirect(['production'], 301));
+//app.use(sslRedirect(['production'], 301));
+app.use(forceSslRedirect);
 
 //app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
