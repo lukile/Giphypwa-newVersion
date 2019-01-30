@@ -3,6 +3,7 @@ const serveStatic = require("serve-static")
 const path = require('path');
 const cors = require('cors');
 //const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
+const sslRedirect = require('heroku-ssl-redirect')
 
 app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
@@ -14,7 +15,7 @@ app.use(serveStatic(path.join(__dirname, 'dist')));
 });*/
 app.use(cors());
 
-app.enable('trust proxy');
+/*app.enable('trust proxy');
 app.use (function (req, res, next) {
     if (req.secure) {
             // request was via https, so do no special handling
@@ -23,7 +24,9 @@ app.use (function (req, res, next) {
             // request was via http, so redirect to https
             res.redirect('https://' + req.headers.host + req.url);
     }
-});
+});*/
+
+app.use(sslRedirect());
 
 //app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
