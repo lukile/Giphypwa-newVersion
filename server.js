@@ -7,7 +7,6 @@ const cors = require('cors');
 const forceSslRedirect = require('force-ssl-heroku');
 
 app = express();
-app.use(serveStatic(path.join(__dirname, 'dist')));
 
 /*app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // tous les requêtes du site je les accepte -- fails de sécurité
@@ -31,6 +30,11 @@ app.use (function (req, res, next) {
 app.use(forceSslRedirect);
 
 //app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(path.join(__dirname, 'dist'), 'index.html'));
+});
+app.use(serveStatic(path.join(__dirname, 'dist')));
 
 const port = process.env.PORT || 5000;
 app.listen(port);
