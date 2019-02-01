@@ -20,16 +20,17 @@
   </div>
 </template>
 
-<script src="/upup.min.js"></script>
+<script src="/static/script/upup.min.js"></script>
 <script>
-    /*UpUp.start({
+    //import UpUp from "upup";
+    UpUp.start({
         'content-url': 'index.html', // show this when the user is offline
         'assets': [                 // define additional assets needed while offline:
             'android-chrome-192x192.png',           // such as images,
             'android-chrome-512x512.png',           // such as images,
             'apple-touch-icon.png'           // such as images
         ]
-    });*/
+    });
 
     export default {
         name: 'app',
