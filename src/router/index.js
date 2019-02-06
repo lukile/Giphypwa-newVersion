@@ -17,5 +17,6 @@ export default new Router({
       name: 'TrendingGif',
       component: TrendingGif
     }
-  ]
+  ],
+  mode: 'history'
 })
