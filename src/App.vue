@@ -2,12 +2,10 @@
   <div id="app">
     <nav class="navbar has-shadow head-bar ">
       <div class="container columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-        <div class="">
+        <div>
           <img class="logo-header" src="@/assets/logo_pwa.png"/>
+          <p class="title-header" id="title">{{ titleProject }}</p>
           <div class="navbar-burger burger" data-target="navMenu"><span></span><span></span><span></span></div>
-        </div>
-        <div class="navbar-menu" id="navMenu">
-          <p class="title-header" id="title">{{titleProject}}</p>
         </div>
       </div>
     </nav>
@@ -23,18 +21,22 @@
 <script src="/static/script/upup.min.js"></script>
 <script>
     //import UpUp from "upup";
-    UpUp.start({
+    /*UpUp.start({
         'content-url': 'index.html', // show this when the user is offline
         'assets': [                 // define additional assets needed while offline:
             'android-chrome-192x192.png',           // such as images,
             'android-chrome-512x512.png',           // such as images,
             'apple-touch-icon.png'           // such as images
         ]
-    });
+    });*/
 
     export default {
         name: 'app',
-        titleProject: 'titleProject'
+        data (){
+          return{
+            titleProject: 'GiffyCrazy'
+          }
+        }
     }
 </script>
 
@@ -80,6 +82,18 @@
     font-weight: bold;
     margin-top: -5.2%;
     margin-left: 8%;
+  }
+
+  @media screen and (max-width: 400px) {
+    .logo-header {
+      width: 5%;
+    }
+
+    .title-header {
+      margin-top: -5.2%;
+      margin-left: 8%;
+      text-align: center;
+    }
   }
 
   .burger {
