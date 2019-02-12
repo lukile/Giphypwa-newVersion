@@ -1,23 +1,18 @@
 <template lang="html">
-  <div>
-    <div class="box cta random-title">
-      <p class="title" align="center">{{ title }}</p>
-    </div>
-
-    <section>
-      <div>
-        <div class="columns is-multiline is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd cards-container">
-          <div>
-            <article class="message is-link">
-              <div class="message-header">
-                <img :src="randomGif" height="200px" alt="randomGif"/>
-              </div>
-            </article>
+  <section class="hero-body">
+    <div class="container">
+      <h2 class="title is-1 has-text-centered">{{ title }}</h2>
+      <h3 class="subtitle is-3 has-text-centered">A RandomGif Presentation, Enjoy your eyes !</h3>
+      <br />
+      <div class="columns is-multiline is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd cards-container">
+        <article class="message is-link">
+          <div class="message-header">
+            <img :src="randomGif" height="200px" alt="randomGif"/>
           </div>
-        </div>
+        </article>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script lang="js">
@@ -45,10 +40,10 @@
 </script>
 
 <style>
-  .random-title {
+  /*.random-title {
     background-color: #0e0202;
     height: 70px;
-  }
+  }*/
 
   .title {
     color: white;
