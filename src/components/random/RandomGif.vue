@@ -1,8 +1,33 @@
 <template lang="html">
   <div>
-    <div class="box cta random-title">
+
+    <div id="navbar-brand">
       <p class="title" align="center">{{ title }}</p>
     </div>
+
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Choose a theme
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            <router-link to="/sticker">Stickers GIFs</router-link>
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            <router-link to="/trending">Trending GIFs</router-link>
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            <router-link to="/random">Random GIFs</router-link>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
 
     <section>
       <div id="gifs">
@@ -47,5 +72,20 @@
 <style scoped>
   #gifs {
     margin-top: 60px;
+  }
+
+  #navbar-brand{
+      align-self: center;
+  }
+
+  nav {
+    background: #0e0202;
+  }
+  nav div {
+    background: #d31b46;
+  }
+
+  nav a {
+    color: #ffffff;
   }
 </style>
