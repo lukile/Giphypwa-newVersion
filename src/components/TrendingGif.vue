@@ -1,21 +1,18 @@
 <template lang="html">
-  <div>
-      <div class="box cta random-title">
-        <p class="title" align="center">{{ title }}</p>
-      </div>
-
-      <section>
-          <div>
-              <div class="columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-                  <div v-for="gif in gifs" class="column is-one-fifth">
-                      <article>
-                          <img :src="gif.images.original.url"  height="150px" alt="trending">
-                      </article>
-                  </div>
+  <section class="hero-body">
+      <div class="container">
+          <h2 class="title is-1 has-text-centered">{{ title }}</h2>
+          <h3 class="subtitle is-3 has-text-centered">A TrendinGif Presentation, Surprise !</h3>
+          <br />
+          <div class="columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+              <div v-for="gif in gifs" class="column is-one-fifth">
+                  <article>
+                      <img :src="gif.images.original.url"  height="150px" alt="trending">
+                  </article>
               </div>
           </div>
-      </section>
-</div>
+      </div>
+  </section>
 </template>
 
 <script lang="js">

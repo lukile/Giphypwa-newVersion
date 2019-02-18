@@ -1,38 +1,49 @@
-<template>
+<template  lang="html">
   <div id="app">
-    <nav class="navbar has-shadow head-bar ">
-      <div class="container columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-        <div class="">
-          <img class="logo-header" src="@/assets/giphy-logo.png" height="200px"/>
-          <div class="navbar-burger burger" data-target="navMenu"><span></span><span></span><span></span></div>
-        </div>
-        <div class="navbar-menu" id="navMenu">
-          <p class="title-header">GIPHY PWA</p>
-        </div>
-      </div>
-    </nav>
+    <section class="hero is-primary">
+      <section class="hero-head">
+        <nav class="nav">
+          <div class="container">
+            <div class="nav-left">
+              <p class="navbar-item title"><img class="logo-header" src="@/assets/logo_pwa.png"/>{{ titleProject }}</p>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </section>
 
     <router-view></router-view>
 
     <footer>
-      <div id="footer">
-      </div>
+      <div id="footer"></div>
     </footer>
   </div>
 </template>
 
+<script src="/static/script/upup.min.js"></script>
 <script>
+    //import UpUp from "upup";
+    /*UpUp.start({
+        'content-url': 'index.html', // show this when the user is offline
+        'assets': [                 // define additional assets needed while offline:
+            'android-chrome-192x192.png',           // such as images,
+            'android-chrome-512x512.png',           // such as images,
+            'apple-touch-icon.png'           // such as images
+        ]
+    });*/
+
     export default {
         name: 'app',
+        data (){
+          return{
+            titleProject: 'GiffyCrazy'
+          }
+        }
     }
 </script>
 
 <style>
   @import '../node_modules/bulma/css/bulma.css';
-
-  body {
-    margin: 0;
-  }
 
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -55,25 +66,23 @@
     color: #ffffff;
   }
 
-  .head-bar {
+  /*.head-bar {
     background-color: #0e0202;
     height: 70px;
     margin-bottom: 30px;
-  }
+  }*/
 
-  .logo-header {
-    width: 70px;
-  }
+  /*.logo-header {
+    width: 8%;
+    margin-top: 1.8%;
+    margin-left: 2%;
+  }*/
 
   .title-header {
-    margin-top: 11px;
     font-size: 30px;
     color: white;
     font-weight: bold;
+    margin-top: -5.2%;
+    margin-left: 8%;
   }
-
-  .burger {
-    background-color: #0e0202;
-  }
-
 </style>
