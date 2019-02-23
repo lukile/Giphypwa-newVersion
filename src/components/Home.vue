@@ -2,7 +2,7 @@
   <section class="demo">
 
     <dl class="list maki">
-      <dt>Choose a theme</dt>
+      <dt>GIF THEMES</dt>
       <dd><router-link to="/sticker">Stickers GIFs</router-link></dd>
       <dd><router-link to="/trending">Trending GIFs</router-link></dd>
       <dd><router-link to="/random">Random GIFs</router-link></dd>
@@ -90,13 +90,12 @@
   }
 
   .list a {
-
     display: block;
     color: #fff;
   }
 
   .list a:hover {
-    text-indent: 20px;
+    text-indent: 85px;
   }
 
   .list dt, .list dd {
@@ -112,7 +111,6 @@
 
   .list dt {
 
-    /* Since we're hiding elements behind here, we need it in 3d */
     -webkit-transform: translateZ(0.3px);
     -moz-transform: translateZ(0.3px);
     -ms-transform: translateZ(0.3px);
@@ -124,7 +122,6 @@
   }
 
   .list dd {
-
     border-top: 1px dashed rgba(255,255,255,0.3);
     line-height: 35px;
     font-size: 11px;
@@ -132,39 +129,9 @@
     margin: 0;
   }
 
-  /* UI */
+  .maki dt, .maki dd, .maki a { background: #00d1b2; }
 
-  .toggle {
-
-    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-    border-radius: 3px;
-
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    line-height: 50px;
-    margin-left: -70px;
-    margin-top: -20px;
-    background: #2b2b2b;
-    text-align: center;
-    font-size: 12px;
-    position: absolute;
-    height: 50px;
-    bottom: 10%;
-    width: 140px;
-    color: #fff;
-    left: 50%;
-  }
-
-  .toggle:hover {
-
-    background: #E42692;
-  }
-
-  /* Individual styles */
-
-  .maki dt, .maki dd, .maki a { background: #FFC219; }
-
-  .maki a:hover { background: #ffbb00; }
+  .maki a:hover { background: #00d1b2; }
 
   .maki {
 

@@ -1,31 +1,31 @@
 <template lang="html">
-  <div>
+  <section class="hero-body">
+    <div class="container">
+      <h2 class="title is-1 has-text-centered">{{ title }}</h2>
+      <h3 class="subtitle is-3 has-text-centered">A TrendinGif Presentation, Surprise !</h3>
+      <br />
 
-    <div id="navbar-brand">
-      <p class="title" align="center">{{ title }}</p>
-    </div>
+      <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-arrowless">
+            GIF THEMES
+          </a>
 
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Choose a theme
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            <router-link to="/sticker">Stickers GIFs</router-link>
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            <router-link to="/trending">Trending GIFs</router-link>
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            <router-link to="/random">Random GIFs</router-link>
-          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item">
+              <router-link to="/sticker">Stickers GIFs</router-link>
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              <router-link to="/trending">Trending GIFs</router-link>
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              <router-link to="/random">Random GIFs</router-link>
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
 
       <section>
@@ -40,6 +40,7 @@
           </div>
       </section>
 </div>
+  </section>
 </template>
 
 <script lang="js">
@@ -67,24 +68,41 @@
 <style scoped>
 
   #gifs {
-    margin-left: 300px;
     margin-top: 60px;
-    margin-right: 60px;
   }
 
-  #navbar-brand{
-    align-self: center;
+  .title {
+    color: white;
   }
 
   nav {
-    background: #0e0202;
+    background: #00d1b2;
   }
+
   nav div {
-    background: #d31b46;
+    background: #00d1b2;
+    font-family: 'Arial Nova', sans-serif;
+    text-decoration-style: solid;
   }
 
   nav a {
     color: #ffffff;
+
+    -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -ms-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+  }
+
+  nav div .navbar-link:hover{
+
+  }
+
+  .navbar-dropdown .navbar-item:hover {
+    text-indent: 20px;
+    background-color: #00c0a7 ;
+    font-size: larger;
   }
 
 </style>

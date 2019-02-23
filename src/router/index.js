@@ -10,10 +10,8 @@ Vue.use(Router);
 export default new Router({
   routes: [
     { path: "/", name: 'Home', component: Home},
-
         { path: '/random', name: 'RandomGif', component: RandomGif },
         { path: '/trending', name: 'TrendingGif', component: TrendingGif },
         { path: '/sticker', name: 'RandomSticker', component: RandomSticker }
-
   ]
 })
