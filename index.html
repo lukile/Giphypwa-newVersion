@@ -84,7 +84,7 @@
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-          .register('/static/script/service-worker.js')
+          .register('/sw.js')
           .then(function() { 
             console.log('Service Worker Registered'); 
           }).catch(e => console.log(e.message));
