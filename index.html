@@ -80,14 +80,7 @@
         <img class="logo-header" style="background-image: url('/static/img/icons/logo_pwa.png'); background-position: top center; background-repeat: no-repeat; position: absolute; height: 100%; width: 100%"/>
       </div>
     </div>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-          .register('/sw.js')
-          .then(function() { 
-            console.log('Service Worker Registered'); 
-          }).catch(e => console.log(e.message));
-      }
-    </script>
+    <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+
   </body>
 </html>
