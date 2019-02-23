@@ -28,9 +28,6 @@
       </div>
     </nav>
 
-
-
-
       <section>
         <div id="gifs">
           <div class="columns is-multiline is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd cards-container">

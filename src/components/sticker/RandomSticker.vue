@@ -26,17 +26,13 @@
           </div>
         </div>
 
-
-
       <div class="navbar-end">
           <div class="navbar-item">
             <div class="control">
-              <input class="input" type="text" placeholder="ex: hamburger">
+              <input class="input" type="text" v-model="keyword" placeholder="ex: cheeseburgers">
             </div>
             <div class="control">
-              <a class="button is-info">
-                Search
-              </a>
+              <button class="button is-info" v-on:click="navigate(keyword)">Search</button>
             </div>
           </div>
         </div>
@@ -69,6 +65,7 @@
       return {
         title: "Random Sticker Gif",
         gifs: null,
+        keyword:'cheeseburgers',
         transitionName: 'slide-left'
       }
     },
@@ -80,6 +77,17 @@
         .catch(error => {
           console.log("Error : " + error);
         })
+    },
+    methods: {
+      navigate: function (keyword) {
+        axios.get("http://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=25")
+          .then(response => {
+            this.gifs = response.data.data;
+          })
+          .catch(error => {
+            console.log("Error : " + error);
+          })
+      }
     }
   }
 </script>
