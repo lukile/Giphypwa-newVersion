@@ -64,6 +64,7 @@ function setOfCachedUrls(e) {
   })
 }
 self.addEventListener("install", function(e) {
+  console.log("sw - install");
   e.waitUntil(caches.open(cacheName).then(function(e) {
     return setOfCachedUrls(e).then(function(t) {
       return Promise.all(Array.from(urlsToCacheKeys.values()).map(function(n) {
