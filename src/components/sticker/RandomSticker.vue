@@ -39,22 +39,22 @@
 
       </nav>
 
-
-
-
-    <section>
-      <div id="gifs">
-        <div class="columns is-multiline is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-          <div v-for="gif in gifs" class="column is-one-fifth">
-            <article>
-              <img :src="gif.images.original.url"  height="150px" alt="trending">
-            </article>
+      <section>
+        <div id="gifs">
+          <div class="columns is-multiline is-centered is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd cards-container">
+            <div v-for="gif in gifs" class="column is-one-fifth">
+              <article class="message is-link">
+                <div class="message-header">
+                  <img :src="gif.images.original.url"  height="200px" alt="trending"/>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
   </section>
+
 </template>
 
 <script>
@@ -70,7 +70,7 @@
       }
     },
     created() {
-      axios.get("http://api.giphy.com/v1/stickers/search?&q=cheeseburgers?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=25")
+      axios.get("http://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
         .then(response => {
           this.gifs = response.data.data;
         })
@@ -80,7 +80,7 @@
     },
     methods: {
       navigate: function (keyword) {
-        axios.get("http://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=25")
+        axios.get("http://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
           .then(response => {
             this.gifs = response.data.data;
           })
