@@ -54,7 +54,7 @@
       }
     },
     created() {
-      axios.get("http://api.giphy.com/v1/gifs/trending?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=25")
+      axios.get("https://api.giphy.com/v1/gifs/trending?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=25")
         .then(response => {
           this.gifs = response.data.data;
         })

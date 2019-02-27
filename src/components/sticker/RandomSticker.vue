@@ -70,7 +70,7 @@
       }
     },
     created() {
-      axios.get("http://api.giphy.com/v1/stickers/search?&q=cheeseburgers?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
+      axios.get("https://api.giphy.com/v1/stickers/search?&q=cheeseburgers?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
         .then(response => {
           this.gifs = response.data.data;
         })
@@ -80,7 +80,7 @@
     },
     methods: {
       navigate: function (keyword) {
-        axios.get("http://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
+        axios.get("https://api.giphy.com/v1/stickers/search?&q="+ keyword +"?&api_key=XrA7LAMCijdvX3iUk9cu7uO1uxB83IWO&limit=1")
           .then(response => {
             this.gifs = response.data.data;
           })
