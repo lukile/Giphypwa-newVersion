@@ -55,12 +55,4 @@
     background-color: #35495E;
     color: #ffffff;
   }
-
-  .title-header {
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-    margin-top: -5.2%;
-    margin-left: 8%;
-  }
 </style>

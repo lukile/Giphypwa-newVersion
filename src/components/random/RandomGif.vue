@@ -6,7 +6,7 @@
       <h3 class="subtitle is-3 has-text-centered">A RandomGif Presentation, Enjoy your eyes !</h3>
       <br />
 
-      <<nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
+      <nav class="navbar is-transparent" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link is-arrowless">
           GIF THEMES
