@@ -71,14 +71,14 @@
     </noscript>
 
     <!-- SPLASH SCREEN -->
-    <div id="app">
+    <!--<div id="app">
       <div style="text-align: left;">
         <h1 style="text-align: center; color: chartreuse;">GiffyCrazy App</h1>
         <img class="logo-header" style="background-image: url('/static/img/icons/logo_pwa.png'); background-position: top center; background-repeat: no-repeat; position: absolute; height: 100%; width: 100%"/>
       </div>
-    </div>
+    </div>-->
 
-    <script>
+    <!--<script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker
           .register('/static/script/service-worker.js')
@@ -86,7 +86,7 @@
             console.log('Service Worker Registered');
           }).catch(e => console.log(e.message));
       }
-    </script>
+    </script>-->
 
     <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
 
