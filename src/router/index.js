@@ -9,6 +9,7 @@ import RandomSticker from '../components/sticker/RandomSticker'
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     { path: "/", name: 'Home', component: Home},
     { path: '/random', name: 'RandomGif', component: RandomGif },
