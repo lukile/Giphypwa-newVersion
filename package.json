@@ -10,13 +10,15 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e"
+    "test": "npm run unit && npm run e2e",
+    "postinstall": "netlify-lambda install"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.2",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "netlify-lambda": "^2.0.15",
     "upup": "^1.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
