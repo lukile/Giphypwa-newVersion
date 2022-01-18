@@ -1,9 +1,9 @@
 [build]
   command = "CI= npm run start"
   functions = "lambda" #  netlify-lambda reads this
-  publish = "build"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
-  to = "/dev-server.js"
+  to = "/index.html"
   status = 200
